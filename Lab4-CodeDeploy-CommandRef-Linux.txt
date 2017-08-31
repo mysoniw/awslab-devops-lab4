@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"caff0d62ed","applicationID":"7198630","transactionName":"IQ1XRUEOVV1dFxlERwMWUFJsEVhWXRYZX1wPBw==","queueTime":0,"applicationTime":32,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="NcKeUo+WyWpZEq1XJ87vX28I0pW0tUQn/MDV/nld2/6/N0szX/TNNtHYVqM+10JwaCO9x0FWZFgAEQivwGz5Kg==" />
+<title>Home | Qwiklabs + aws</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0' name='viewport'>
+<meta content='Qwiklabs provides lab learning environments that help developers and IT professionals get hands-on experience working with leading cloud platforms and software.' name='description'>
+<meta content='Learn AWS, AWS Training, AWS Labs, Learn Amazon Web Services, Amazon Web Services Training, Amazon Web Services Labs' name='keywords'>
+<meta content='Qwiklabs' name='author'>
+<meta content='Home | Qwiklabs + aws' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='/favicon.png' property='og:image'>
+<meta content='https://www.qwiklabs.com' property='og:url'>
+<meta content='Qwiklabs' property='og:site_name'>
+<meta content='Qwiklabs provides lab learning environments that help developers and IT professionals get hands-on experience working with leading cloud platforms and software.' property='og:description'>
+<meta content='/qwiklabs_logo_900x887.png' property='og:logo' size='900x887'>
+<meta content='/qwiklabs_logo_994x187.png' property='og:logo' size='994x187'>
+<meta content='#3681E4' property='msapplication-TileColor'>
+<meta content='/favicon-144.png' property='msapplication-TileImage'>
+<link href='/favicon.ico' rel='shortcut icon'>
+<link color='#3681E4' href='/favicon-svg.svg' rel='mask-icon'>
+<link href='/favicon-180.png' rel='apple-touch-icon-precomposed'>
+
+<script src="https://cdn.ravenjs.com/3.9.1/raven.min.js"></script>
+<script type='text/javascript'>
+  Raven.config("https://4a2bbae1cfa840faba7511290f628955@sentry.io/111216", {
+    environment: "production",
+    tags: {
+      deployment: "aws",
+      subdomain: "aws"
+    }
+  }).install();
+
+</script>
+
+<!--[if lt IE 9]>
+<script src='http://html5shim.googlecode.com/svn/trunk/html5.js' type='text/javascript'></script>
+<![endif]-->
+<!--[endif]>  <![endif]-->
+<script>
+//<![CDATA[
+window.gon={};gon.segment=null;
+//]]>
+</script>
+
+
+<script src="//d3v986wpwcmdne.cloudfront.net/assets/application_old/application_old-99414665b89ab09b63eb73b7029f2bad7f92ffcdb6f2e1e5a1243d09c101ea53.js"></script>
+<link rel="stylesheet" media="screen" href="//d3v986wpwcmdne.cloudfront.net/assets/application_old/bootstrap_and_overrides-17c7e182ff1e42ca137a98e01ab5ad4565e1b2ad2a170fbf02ff6b3ccdfd423c.css" />
+<link rel="stylesheet" media="all" href="//d3v986wpwcmdne.cloudfront.net/assets/application_old/application_old-ff6813ae2aa8299b1fc3762c2982ea9c60ba4797b1305f3eb8a5425b4777fac8.css" />
+</head>
+<body class=' ' id='body-layout'>
+<div class='header' id='header'>
+<div class='navbar navbar-fixed-top'>
+<iframe class='ie-cover' src=''></iframe>
+<div class='navbar-inner' id='navbar-inner-for-top'>
+<ul class='nav menu' style='margin-right: 0px;'>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' style='font-size: 20px; padding-right: 0px;'>
+<i class='icon-align-justify'></i>
+</a>
+<ul class='dropdown-menu'>
+<li style='background-color: #eaeaea'>
+<a href="/about_us?locale=en">ABOUT</a>
+</li>
+<li style='background-color: #eaeaea'>
+<a href="/privacy_policy?locale=en">PRIVACY POLICY</a>
+</li>
+<li style='background-color: #eaeaea'>
+<a href="/terms_of_service?locale=en">TERMS OF SERVICE</a>
+</li>
+<li style='background-color: #eaeaea;border-radius: 0 0 6px 6px'>
+<a href="/contact?locale=en">CONTACT</a>
+</li>
+</ul>
+</li>
+</ul>
+<a class='brand' href='/?locale=en' style='margin-left: 0px;'>
+<img style="height: 50px; margin-right: 8px; margin-left: 8px;" src="https://s3.amazonaws.com/qwiklab-config/AWS-Logo-Sized.png" alt="Aws logo sized" />
+</a>
+<ul class='nav pull-right'>
+<li class='dropdown language'>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Language<b class="caret"></b>
+</a><ul class='dropdown-menu'>
+<li>
+<a href="/?locale=en"><img src="//d3v986wpwcmdne.cloudfront.net/assets/en-a1983a58b9e230c998f86e6c8be18a809f1598223011369d2676848ae32ddc2a.png" alt="En" />&nbsp;&nbsp;English
+</a></li>
+<li>
+<a href="/?locale=es"><img src="//d3v986wpwcmdne.cloudfront.net/assets/es-e2192905d2358a512634822f4309d9426c2ae1fdf1c215b6e362e873b3fe013b.png" alt="Es" />&nbsp;&nbsp;Español
+</a></li>
+<li>
+<a href="/?locale=fr"><img src="//d3v986wpwcmdne.cloudfront.net/assets/fr-cb6f509893a41beb0639aa867804d668fa3c44be5a27b3889572995176a7513f.png" alt="Fr" />&nbsp;&nbsp;Français
+</a></li>
+<li>
+<a href="/?locale=ja"><img src="//d3v986wpwcmdne.cloudfront.net/assets/ja-ecaf8870f1afca1084cf674ddce6e1bc1d6f669c5e51f302baded352fe65afe4.png" alt="Ja" />&nbsp;&nbsp;日本語
+</a></li>
+<li>
+<a href="/?locale=ko"><img src="//d3v986wpwcmdne.cloudfront.net/assets/ko-712c3dd949b1eb352cb5879aa9485dfcd0ae5eb67eee4caadcf8513111b5f895.png" alt="Ko" />&nbsp;&nbsp;한국의
+</a></li>
+<li>
+<a href="/?locale=zh"><img src="//d3v986wpwcmdne.cloudfront.net/assets/zh-6e5a8dd2d2d1329ebd3483bef7b363cbf7a0c8dafd0af823fe2de3e917209d64.png" alt="Zh" />&nbsp;&nbsp;简体中文
+</a></li>
+</ul>
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div class='layout container'>
+<div class='layout-alerts'>
+    <div class="alert alert-error">
+        Sorry, access denied to this resource.
+      <a class="close" data-dismiss="alert">&times;</a>
+    </div>
+</div>
+
+<style>
+  .container.layout {
+    border: 0px solid transparent;
+  }
+</style>
+<div data-fail='Sorry, something went wrong and we are working to fix this as soon as we can.' id='generic_messages'></div>
+<div id='home'>
+<style>
+  .container.layout {
+    border: 1px solid #ccc;
+  }
+</style>
+<div class='alert alert-info'>
+<button class='close' data-dismiss='alert' style='font-size:14px;'>x</button>
+<h4>Important Information</h4>
+<ul>
+<li>This site is not hosted or operated by Amazon Web Services Inc or its affiliates.</li>
+<li>Please remember, it is always a best practice to use unique usernames and passwords at each site you use.</li>
+</ul>
+</div>
+<div class='row'>
+<div class='span3'>
+<div class='sign_in'>
+<h2>Existing Account</h2>
+<br>
+
+<form class="simple_form form-vertical" id="new_user" action="/users/sign_in?locale=en" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="AaiCxXliUIZ9/Vt282Kf1ZOur9Mnhj6ixwUbCrvBlxCLXVekqQBU2vU3oILqezL6lIXAgdJlHt071MZbAvC1xA==" />
+  <div class="inputs">
+    <div class="control-group email optional user_email"><label class="email optional control-label" for="user_email">E-mail</label><div class="controls"><input class="string email optional" autofocus="autofocus" type="email" name="user[email]" id="user_email" /></div></div>
+    <div class="control-group password optional user_password"><label class="password optional control-label" for="user_password">Password</label><div class="controls"><input class="password optional" type="password" name="user[password]" id="user_password" /></div></div>
+    <div class="control-group boolean optional user_remember_me simpleform_remember_me_checkbox"><label class="boolean optional control-label simpleform_remember_me_label" for="user_remember_me">Remember Me</label><div class="controls"><input value="0" type="hidden" name="user[remember_me]" /><label class="checkbox"><input class="boolean optional" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" /></label></div></div> 
+  </div>
+
+  <br> <br>
+  <div class="actions">
+    <label class="string optional control-label" for="user_ "> </label>
+      &nbsp; &nbsp;
+      <input type="submit" name="commit" value="Sign In" class="btn btn-primary" />
+  </div>
+</form>
+  <a href="/users/password/new?locale=en">Forgot your password?</a><br />
+
+</div>
+</div>
+<div class='span8'>
+<div class='create_account'>
+<h2>Create a New Account</h2>
+<br>
+<form class="simple_form form-horizontal" id="new_user" action="/users?locale=en" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ZNgQGd8hRBXmNsjH3DQ3SgvF/vTyesgHq3qaXCS9soTuLcV4D0NASW78MzPFLZplDO6RpgeZ6HhXq0cNnYyQUA==" />
+
+
+<div class="inputs">
+    <div class="control-group string required user_first_name"><label class="string required control-label" for="user_first_name"><abbr title="required">*</abbr> First Name</label><div class="controls"><input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="user[first_name]" id="user_first_name" /></div></div>
+    <div class="control-group string required user_last_name"><label class="string required control-label" for="user_last_name"><abbr title="required">*</abbr> Last Name</label><div class="controls"><input class="string required" required="required" aria-required="true" type="text" name="user[last_name]" id="user_last_name" /></div></div>
+  <div class="control-group string required user_company_name"><label class="string required control-label" for="user_company_name"><abbr title="required">*</abbr> Company Name</label><div class="controls"><input class="string required" required="required" aria-required="true" type="text" name="user[company_name]" id="user_company_name" /></div></div>
+  <div class="control-group email required user_email"><label class="email required control-label" for="user_email"><abbr title="required">*</abbr> E-mail</label><div class="controls"><input class="string email required" required="required" aria-required="true" type="email" name="user[email]" id="user_email" /></div></div>
+  <div class="control-group password required user_password"><label class="password required control-label" for="user_password"><abbr title="required">*</abbr> Password</label><div class="controls"><input class="password required" required="required" aria-required="true" type="password" name="user[password]" id="user_password" /></div></div>
+  <div class="control-group password required user_password_confirmation"><label class="password required control-label" for="user_password_confirmation"><abbr title="required">*</abbr> Password Confirmation</label><div class="controls"><input class="password required" required="required" aria-required="true" type="password" name="user[password_confirmation]" id="user_password_confirmation" /></div></div>
+  <div class="control-group hidden user_locale"><div class="controls"><input value="en" class="hidden" type="hidden" name="user[locale]" id="user_locale" /></div></div>
+
+  <div class="terms_and_conditions_container">
+    <div class="tandc well well-large">
+      <div class="tandc_text">
+        <h1 class='text--center l-mbxl'>
+Qwiklabs Terms of Service
+</h1>
+<p>
+THIS TERMS OF SERVICE AGREEMENT (THE “AGREEMENT”), ALONG WITH THE PRIVACY POLICY LOCATED AT <a href='http://qwiklab.com/privacy_policy'>qwiklab.com/privacy_policy</a> (THE “PRIVACY POLICY”), ESTABLISHES THE TERMS AND CONDITIONS APPLICABLE TO YOUR USE OF THE SERVICE (AS DEFINED BELOW) OFFERED BY CLOUD VLAB INC. (“CLOUD VLAB” OR ‘WE’).  BY CLICKING THE "I ACCEPT" BUTTON DISPLAYED AS PART OF THE REGISTRATION PROCESS OR BY USING THE SERVICE OR ANY PORTION THEREOF, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT AND THE PRIVACY POLICY, INCLUDING ALL TERMS INCORPORATED HEREIN BY REFERENCE.  IF YOU ARE ENTERING INTO THIS AGREEMENT ON BEHALF OF A COMPANY OR OTHER LEGAL ENTITY, YOU REPRESENT THAT YOU HAVE THE AUTHORITY TO BIND SUCH ENTITY TO THIS AGREEMENT, IN WHICH CASE THE TERMS "YOU" OR "YOUR" SHALL REFER TO SUCH ENTITY.  IF YOU DO NOT HAVE SUCH AUTHORITY, OR IF YOU DO NOT AGREE WITH THESE TERMS AND CONDITIONS, YOU MUST SELECT THE "I DECLINE" BUTTON AND MAY NOT USE THE SERVICE.
+</p>
+<ol>
+<li>
+<strong>
+Definitions
+</strong>
+<ol>
+<li>
+“Service” means the Lab Service and the Lab Creation Service, collectively, along with the Qwiklab Site.
+<ol>
+<li>
+“Lab Service” means the educational, training, and learning services provided to you through the Qwiklabs Site, or any related website provided by Cloud vLab, in concert with your respective Lab Sponsor.
+</li>
+<li>
+“Creator role” means the designation of your account as a creator to access the “Lab Creation Service”. If you have the Creator role, all sections of this agreement apply to you including sections that reference the Lab Service and the Lab Creation Service.
+</li>
+<li>
+“Lab Creation Service” means the services and functionality hosted by Cloud vLab and made available to you only if you have a “Creator role” on or through the Qwiklabs Site through which you may deploy, configure, customize, manage, administer, and control a virtual server for implementing and testing software as a part of your training through the Lab Service.
+</li>
+</ol>
+</li>
+<li>
+“Lab Sponsor” means the company or other organization with whom you are employed or otherwise associated in connection with the Lab Service.
+</li>
+<li>
+"Content" means any content or work of authorship created, owned or licensed by you only if you have a “Creator role’, submitted to the Lab Creation Service, and that is transmitted, rendered, displayed or executed on or through the Service, including without limitation any text, postings, audio, sounds, video, photos, images, messages, software, and materials.
+</li>
+<li>
+“Sponsor Content” means any content or work of authorship created, owned, or licensed by your Lab Sponsor and utilized in the Service.
+</li>
+<li>
+“Qwiklabs Technology” means all of Cloud vLab’s proprietary technology (including, but not limited to, software, hardware, products, processes, algorithms, user interfaces, know-how, techniques, designs, and other tangible or intangible technical material or information) made available to you by Cloud vLab in providing the Service, excluding Sponsor Content.
+</li>
+<li>
+“Qwiklabs Site” means the web site located at Qwiklab.com, and/or any related or successor URLs operated or controlled by Cloud vLab.
+</li>
+<li>
+“Resources” means any virtual or physical infrastructure provided to you by the Service.
+</li>
+</ol>
+</li>
+<li>
+<strong>
+Use of the Service
+</strong>
+<ol>
+<li>
+<strong>
+Overview of Rights
+</strong>
+</li>
+<p>
+This Agreement applies to all use of the Service.  Subject to the terms and conditions of this Agreement and your registration with us through the Qwiklabs user registration process, Cloud vLab hereby grants you the right to use the Lab Service under the terms of this Agreement. Furthermore, if you have a Creator role, Cloud vLab hereby grants you the right to use the Lab Creation Service  under the terms of this Agreement.  Use of Resources may be performed only in accordance with the terms and conditions of this Agreement and such other specifications as may be communicated by Cloud vLab from time to time.
+</p>
+<li>
+<strong>
+Restrictions and Limitations
+</strong>
+</li>
+<p>
+(a) You may not access the Service if you are a competitor of Cloud vLab, unless you have our prior written consent.  In addition, you may not access and/or use the Service for purposes of monitoring its availability, performance, or functionality, or for any other benchmarking or competitive purposes.
+</p>
+<p>
+(b) You shall not (i) license, sublicense, sell, resell, transfer, assign, distribute, or otherwise commercially exploit or make available to any third party the Service in any way, except as expressly authorized in this Agreement; (ii) modify (except as permitted through the Lab Creation Service (if you have a Creator role) or make derivative works based upon the Service; (iii) reverse engineer the Service and/or any component thereof; (iv) access the Service in order to build a competitive product or service; (v) build a product using similar ideas, features, functions, or graphics of the Service, or (vi) copy any ideas, features, functions, or graphics of the Service.
+</p>
+<p>
+(c) You shall not utilize any part of the Service to: (i) send spam or otherwise duplicative or unsolicited messages in violation of applicable Laws (as defined below); (ii) send or store infringing, obscene, threatening, libelous, defamatory, pornographic, online gambling, or otherwise unlawful or tortious material, including material harmful to children or that violates third party privacy rights or inconsistent with the generally accepted practices of the Internet community as reasonably determined by Cloud vLab; (iii) send or store material containing software viruses, worms, Trojan horses or other harmful computer code, files, scripts, agents, or programs; (iv) interfere with or disrupt the integrity or performance of the Service or the data contained therein; (v) attempt to gain unauthorized access to the Service or its related systems or networks; or (vi) enable, further, or participate in any unlawful activity.  You may not use any part of the Service in connection with providing any website or service that is aimed at, directed to, or marketed to children under the age of 13.  You acknowledge and agree that if Cloud vLab or any Lab Sponsor becomes aware or has reason to believe that you are engaging in any such prohibited activity, both have the right to immediately suspend and/or terminate your use of the Service.
+</p>
+<p>
+(d) If you have a Creator role any use of the Lab Creation Service and the Resources must be limited to use for the sole purpose of completing or participating in Lab Services provided by your Lab Sponsor. The Resources may not be made available to or accessed by any third party other than your Lab Sponsor and/or any individuals acting on behalf of your Lab Sponsor.  All software or other Content stored on the Resources may be deleted at any time by Cloud vLab.  Cloud vLab makes no warranties or representations with respect to the performance, reliability, or functionality of the Lab Creation Service.  All Content or other data stored on the Resources should be non-confidential and no warranty or representation is made with respect to the confidentiality or security of any Content stored on the Resources.
+</p>
+<p>
+(e) The Lab Service and if you have a Creator role, Lab Creation Service right to use is non-transferable. Any Lab tokens you buy or any promotional tokens you’re given are for your individual use and cannot be resold or distributed.
+</p>
+<p>
+(f) All rights not expressly granted to you are reserved by Cloud vLab and its licensors.
+</p>
+</ol>
+</li>
+<li>
+<strong>
+Your Responsibilities
+</strong>
+</li>
+<p>
+You are responsible for all activity occurring through the use of the Service.  You represent that you shall abide by all applicable local, state, national, and foreign laws and regulations in connection with your use of the Service, including, without limitation, those related to intellectual property and privacy (collectively, "Laws").
+</p>
+<p>
+You will not obscure or contravene or attempt to obscure or contravene any notices of or attribution to Cloud vLab displayed within the Service that relate to Cloud vLab’s role as a service provider.
+</p>
+<p>
+You will select and use a secure user password for your account and you agree not to share your password with any other party.
+</p>
+<li>
+<strong>
+Commercial Activities Prohibited
+</strong>
+</li>
+<p>
+The Resources may not be used for commercial advertising purposes or related promotional or commercial activities. If you have a Creator role, use of the Lab Creation Service is limited to the creation and testing of Content and related materials in connection with the Lab Service.
+</p>
+<li>
+<strong>
+Your Information
+</strong>
+</li>
+<p>
+You agree to provide Cloud vLab with your complete and accurate contact information, including, without limitation, when completing the account registration process.  This information includes your first and last name, legal name or business name, country of residence, e-mail address, and password.  You agree to update this information within fifteen (15) days of any change to it.  If the contact information you have provided is false or fraudulent, Cloud vLab reserves the right to terminate your access to the Service in addition to any other legal remedies.  Our collection, use, and storage of your personal information is subject to the terms and conditions of our Privacy Policy, which is set forth at <a href='http://qwiklab.com/privacy_policy'>http://qwiklab.com/privacy_policy</a>.
+</p>
+<li>
+<strong>
+Content; Ownership
+</strong>
+</li>
+<p>
+This section is applicable to you only if you have a Creator role on Qwiklabs site or any other site provided by Cloud vLab in concert with your Lab Sponsor.
+</p>
+<p>
+As between you and Cloud vLab, Content shall be the property of you.  By posting, uploading, inputting, providing or submitting Content, y ou hereby grant to Cloud vLab and its affiliated companies, Agents and necessary sublicensees a worldwide, perpetual, royalty-free license to (i) copy, reproduce, edit, translate, reformat, store, display, distribute, and perform Content on or through the Service in order to provide the Service; (ii) use and analyze the Content in furtherance of Cloud vLab’s internal business purposes or otherwise for the purpose of providing the Service; (iii) disclose metrics regarding Content on an aggregated basis for marketing and business development purposes; (iv) publish your name in connection with your Content; and (v) sublicense such rights to any supplier or third party in relation to the operation of the Qwiklabs business including the Service. "Agents" include (i) service providers and related third parties that CloudvLab may hire to perform certain business-related functions and (ii) business partners and related third parties with which CloudvLab may have a contractual relationship with respect to the Service.
+</p>
+<p>
+You acknowledge and agree that you have sole responsibility for ensuring that all Content submitted on or through the Service by you is compliant with the terms and conditions of this Agreement, all other terms of use agreements, disclaimers, and notices that may be displayed by Cloud vLab on or through the Service, and all Laws ("Applicable Terms").  You, and not Cloud vLab, shall have sole responsibility for the accuracy, quality, integrity, legality, reliability, appropriateness, and intellectual property ownership or right to use of all Content, and Cloud vLab shall not be responsible or liable for the deletion, correction, destruction, damage, loss, or failure to store any Content.  Cloud vLab reserves the right to, without notice, withhold, remove, and/or discard Content not in compliance with the Applicable Terms, and to remove or disable any Resources or account not in compliance with the Applicable Terms.
+</p>
+<li>
+<strong>
+Demonstration Accounts and Use
+</strong>
+</li>
+<p>
+Cloud vLab may grant to certain persons or entities a limited-time demonstration account (“Demo Account”) to use the Service for the limited purpose of evaluating the Service for purchase.  Any such Demo Account granted to you may be used only for the limited time period specified by Cloud vLab (the “Demo Period”) upon provision of the Demo Account login details to you.  Any Demo Account may be revoked at any time and for any reason. All Content submitted by any user of a Demo Account will be deleted upon termination of the Demo Period.  In addition to the terms and conditions of this Section 7, all terms and conditions of this Agreement shall apply to any use of the Service in connection with a Demo Account.
+</p>
+<li>
+<strong>
+Intellectual Property
+</strong>
+<ol>
+<li>
+<strong>
+Cloud vLab Intellectual Property
+</strong>
+</li>
+<p>
+Cloud vLab and its licensors, partners, or affiliates, where applicable, shall own all right, title, and interest, including, without limitation, all intellectual property rights in and to the Cloud vLab Technology.  This Agreement is not a sale and does not convey to you any rights of ownership in or related to the Service, the Cloud vLab Technology or the intellectual property rights owned by Cloud vLab.  The Cloud vLab name, the Qwiklabs trademark, and the other product names associated with the Service are trademarks of Cloud vLab, and no right or license is granted to use them.
+</p>
+<li>
+<strong>
+Feedback
+</strong>
+</li>
+<p>
+You hereby assign and agree to assign to Cloud vLab all right, title, and interest in and to any enhancement requests, recommendations, suggestions, comments, evaluations, ideas, or other information relating to the Service (“Feedback”) provided by you to Cloud vLab, including, but not limited to, all intellectual property rights embodied in such Feedback.
+</p>
+</ol>
+</li>
+<li>
+<strong>
+Modification of Terms
+</strong>
+</li>
+<p>
+Cloud vLab reserves the right to modify this Agreement or its policies relating to the Service and other Applicable Terms, at any time, effective upon posting of an updated version of this Agreement, policies and/or other Applicable Terms on the Service.  You are responsible for regularly reviewing this Agreement and such policies, the current version of which shall be made available as set forth herein through the Qwiklabs Site.  If any change to this Agreement is not acceptable to you, your sole remedy is to terminate your use of the Service and any other rights under this Agreement.  Any use of the Service after such publication shall constitute acceptance by you of such revised Agreement.
+</p>
+<li>
+<strong>
+Term and Termination
+</strong>
+<ol>
+<li>
+<strong>
+Term
+</strong>
+</li>
+<p>
+This Agreement commences upon your acceptance of this Agreement by clicking “I Accept” in the sign-up process for the Service and shall continue until terminated (the “Term”).  You acknowledge and agree that Cloud vLab or your Lab Sponsor may terminate and/or suspend your access to any portion of the Service for any reason or for no reason at all, in Cloud vLab’s sole discretion, without prior notice.  You may terminate this Agreement at any time by discontinuing your use of the Service.  For users of Demo Accounts, this Agreement shall terminate upon the expiration of the corresponding Demo Period.  All other user accounts shall terminate upon the conclusion or withdrawal of the Lab Service by the Lab Sponsor.
+</p>
+<li>
+<strong>
+Effects of Termination
+</strong>
+</li>
+<p>
+Upon termination or expiration, your right to access or use Content shall immediately cease, and Cloud vLab shall have no obligation to retain copies of any Content or related data. Upon termination or expiration of this Agreement, the following provisions will survive in full force and effect: 6, 8, 10.2, 11, 12, 13 and 15, and any other clause or portion of a clause which, by its nature, is intended to survive termination or expiration of this Agreement.
+</p>
+</ol>
+</li>
+<li>
+<strong>
+Indemnification
+</strong>
+</li>
+<p>
+You shall indemnify and hold Cloud vLab, its licensors, partners and each such party’s parent organizations, subsidiaries, affiliates, officers, directors, employees, attorneys, and agents harmless from and against any and all claims, demands, costs, damages, losses, liabilities, and expenses (including attorneys’ fees and costs) arising out of or in connection with: (i) any Content, including without limitation any claim alleging that use of any Content infringes or misappropriates the rights of, or has caused harm to, a third party; (ii) a breach or violation by you of any responsibilities, representations, covenants, or warranties under this Agreement and/or other Applicable Terms; or (iii) your use of the Resources.  You agree that Cloud vLab’s licensors and partners shall be third party beneficiaries of your indemnification obligations hereunder.
+</p>
+<li>
+<strong>
+Disclaimer of Warranties
+</strong>
+</li>
+<p>
+You acknowledge and agree that by using the Service, you may be exposed to Sponsor Content that is offensive, indecent, or objectionable.  You further acknowledge and agree that the Service and the Sponsor Content may contain errors or omissions.  You acknowledge and agree that Cloud vLab does not screen or review published Sponsor Content on the Service to determine whether it contains false or defamatory material or material which is offensive, indecent, objectionable, or which contains errors or omissions.  Under no circumstances will Cloud vLab be liable in any way for Sponsor Content, including, but not limited to, for any defamation, falsehoods, errors, or omissions in any such content, or for any loss or damage of any kind incurred as a result of the use or publication of any such Sponsor Content posted, emailed, or otherwise transmitted via the Service.  Cloud vLab does not guarantee that any Sponsor Content will be to your satisfaction.
+</p>
+<p>
+CLOUD VLAB AND ITS LICENSORS MAKE NO REPRESENTATION, WARRANTY, OR GUARANTY AS TO THE RELIABILITY, TIMELINESS, QUALITY, SUITABILITY, TRUTH, AVAILABILITY, ACCURACY, OR COMPLETENESS OF THE SERVICE OR ANY SPONSOR CONTENT.  CLOUD VLAB AND ITS LICENSORS DO NOT REPRESENT OR WARRANT THAT (A) THE USE OF THE SERVICE WILL BE SECURE, TIMELY, UNINTERRUPTED, OR ERROR-FREE OR OPERATE IN COMBINATION WITH ANY OTHER HARDWARE, SOFTWARE, SYSTEM, OR DATA, (B) THE SERVICE WILL MEET YOUR REQUIREMENTS OR EXPECTATIONS, (C) ANY STORED DATA WILL BE ACCURATE OR RELIABLE, (D) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE SERVICE WILL MEET YOUR REQUIREMENTS OR EXPECTATIONS, (E) ERRORS OR DEFECTS WILL BE CORRECTED, OR (F) THE SERVICE OR THE SERVER(S) THAT MAKE THE SERVICE AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.  THE SERVICE AND ALL SPONSOR CONTENT ARE PROVIDED TO YOU STRICTLY ON AN "AS IS" BASIS.  CLOUD VLAB AND ITS LICENSORS HEREBY DISCLAIM (TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW) ALL CONDITIONS, REPRESENTATIONS AND WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF THIRD PARTY RIGHTS.
+</p>
+<p>
+CLOUD VLAB’S SERVICES MAY BE SUBJECT TO LIMITATIONS, DELAYS, AND OTHER PROBLEMS INHERENT IN THE USE OF THE INTERNET AND ELECTRONIC COMMUNICATIONS.  CLOUD VLAB IS NOT RESPONSIBLE FOR ANY DELAYS, DELIVERY FAILURES, OR OTHER DAMAGE RESULTING FROM SUCH PROBLEMS.
+</p>
+<li>
+<strong>
+Limitation of Liability
+</strong>
+</li>
+<p>
+IN NO EVENT SHALL CLOUD VLAB’S AGGREGATE LIABILITY ARISING WITH RESPECT TO OR IN CONNECTION WITH THIS AGREEMENT EXCEED THE AMOUNTS RECEIVED BY CLOUD VLAB AND ATTRIBUTABLE TO YOUR LAB SPONSOR’S RELATIONSHIP WITH US, IF ANY, IN THE THREE (3) MONTH PERIOD IMMEDIATELY PRECEDING THE EVENT UPON WHICH CLAIMS ARE BASED.  IN NO EVENT SHALL CLOUD VLAB AND/OR ITS LICENSORS BE LIABLE TO ANYONE FOR ANY INDIRECT, PUNITIVE, SPECIAL, EXEMPLARY, INCIDENTAL, CONSEQUENTIAL, OR OTHER DAMAGES OF ANY TYPE OR KIND (INCLUDING LOSS OF DATA, REVENUE, PROFITS, USE, OR OTHER ECONOMIC ADVANTAGE) ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SERVICE, INCLUDING BUT NOT LIMITED TO THE USE OF OR INABILITY TO USE THE SERVICE, OR FOR ANY CONTENT OBTAINED FROM OR THROUGH THE SERVICE, ANY INTERRUPTION, INACCURACY, ERROR, OR OMISSION, REGARDLESS OF CAUSE, IN THE CONTENT, EVEN IF CLOUD VLAB OR ITS LICENSORS HAVE BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+</p>
+<li>
+<strong>
+Force Majeure
+</strong>
+</li>
+<p>
+In no event shall Cloud vLab incur any liability to you or any End Users on account of any loss or damage resulting from any delay or failure to perform all or any part of this Agreement to the extent such delay or failure is caused by events, occurrences, or causes beyond the control and without negligence of Cloud vLab, including by not limited to acts of God, strikes, riots, acts of war, lockouts, earthquakes, fires, and explosions.
+</p>
+<li>
+<strong>
+General
+</strong>
+</li>
+<p>
+This Agreement shall be governed by Massachusetts law and controlling United States federal law, without regard to the choice or conflicts of law provisions of any jurisdiction, and any disputes, actions, claims, or causes of action arising out of or in connection with this Agreement or the Service shall be subject to the exclusive jurisdiction of the state and federal courts located in Massachusetts.  If any provision of this Agreement is held by a court of competent jurisdiction to be invalid or unenforceable, then such provision(s) shall be construed, as nearly as possible, to reflect the intentions of the invalid or unenforceable provision(s), with all other provisions remaining in full force and effect.  All notices to be delivered under this Agreement shall be sent via postal mail to the applicable party at the address notified by the applicable party in writing.  Notice shall be deemed to have been given forty-eight (48) hours after the mailing of the written notice. No joint venture, partnership, employment, or agency relationship exists between you and Cloud vLab as a result of this agreement or use of the Service.  The failure of either party to enforce any right or provision in this Agreement shall not constitute a waiver of such right or provision unless acknowledged and agreed to by the waiving party in writing.  The section headings herein are included merely for convenience of reference, do not limit or affect any of the contents of this Agreement, and are not to be considered part of, or to be used in interpreting, this Agreement.  Cloud vLab may assign this Agreement at any time without prior notice to you. You may not assign this Agreement without the prior written consent of Cloud vLab, which consent may be withheld by Cloud vLab at its sole discretion.  Any purported assignment by you in violation of this section shall be void.  This Agreement, which incorporates the Cloud vLab Privacy Policy comprises the entire agreement between you and Cloud vLab and governs your use of the Service, superseding all prior or contemporaneous negotiations, discussions or agreements, whether written or oral, between the Parties regarding the subject matter hereof.
+</p>
+</ol>
+<p class='text--light text--small'>
+Last Updated: September 1, 2015
+</p>
+
+      </div>
+    </div>
+    <div class="privacy">
+      <a href="/privacy_policy?locale=en"><i class='icon-info-sign'></i> Privacy Statement</a>
+    </div>
+  </div>
+
+  <div class="control-group boolean optional user_terms_of_service"><label class="boolean optional control-label" for="user_terms_of_service">I agree to the Terms of Service</label><div class="controls"><input value="0" type="hidden" name="user[terms_of_service]" /><label class="checkbox"><input class="boolean optional" type="checkbox" value="1" name="user[terms_of_service]" id="user_terms_of_service" /></label></div></div>
+  <div class="control-group boolean optional user_marketing_opt_in"><label class="boolean optional control-label" for="user_marketing_opt_in">Opt-in. Send me valuable promos and updates about new hands-on learning!</label><div class="controls"><input value="0" type="hidden" name="user[marketing_opt_in]" /><label class="checkbox"><input class="boolean optional" type="checkbox" value="1" name="user[marketing_opt_in]" id="user_marketing_opt_in" /></label></div></div>
+
+</div>
+
+<div class="actions">
+  <label class="string optional control-label" for="user_ "> </label>
+  &nbsp; &nbsp;
+  <input type="submit" name="commit" value="Create a New Account" id="qwiklab_create_account" class="btn btn-primary" disable_with="Creating a new account" />
+</div>
+</form>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<div class='container-fluid' style='padding-left: 0; padding-right: 0;'>
+<footer class='container layout' id='footer'>
+<div class='container-fluid'>
+<div class='row-fluid'>
+<div class='span2'>
+<ul>
+<li><a href="/about_us?locale=en">About</a></li>
+<li><a href="/privacy_policy?locale=en">Privacy Policy</a></li>
+<li><a href="/terms_of_service?locale=en">Terms of Service</a></li>
+<li><a href="/contact?locale=en">Contact</a></li>
+</ul>
+</div>
+<div class='span2'>
+</div>
+<div class='span8'>
+<ul class='pull-right' style='text-align: right;'>
+<li>
+<a target="_blank" href="https://twitter.com/qwiklabs"><img src="//d3v986wpwcmdne.cloudfront.net/assets/twitter-372334aadf550279795761380e2087aea9696dd5d1e76901d0ac22350f571c2a.png" alt="Twitter" />
+</a><a target="_blank" href="https://www.facebook.com/Qwiklabs/"><img src="//d3v986wpwcmdne.cloudfront.net/assets/facebook-4bb5c4cd593b19266cddcaa70eb3a0ce7e3f6faec47c6d4720054243ec4e60d7.png" alt="Facebook" />
+</a><a target="_blank" href="https://www.linkedin.com/company/10480856"><img src="//d3v986wpwcmdne.cloudfront.net/assets/linkedin-f12eb4ff2a5a8c3cbc82a04b9ed70161a2af06eadb0c385fe77a50804841e308.png" alt="Linkedin" />
+</a></li>
+<li>
+&copy; Qwiklabs '12-'16
+</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<div id='support'>
+<a class="btn btn-primary" id="support_tab" href="#">Support</a>
+<div class='modal hide fade' id='support_modal'>
+<iframe class='ie-cover' src=''></iframe>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button class='close' data-dismiss='modal' type='button'>&times;</button>
+<h3>How can we help you?</h3>
+</div>
+<div class='modal-body row-fluid span12 field-set'>
+<form class="form-horizontal" action="/contact_support?locale=en" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="rSHY9A62TY4JT8W0JizlN9DhhTPvUu3A6OvhgsRpssEn1A2V3tRJ0oGFPkA/NUgY18rqYRqxzb8UOjzTfViQFQ==" />
+<div class='control-group'>
+<label class="required control-label" for="Question">Question</label>
+<input type="text" name="question" id="question" placeholder="Briefly describe your question" />
+</div>
+<div class='control-group'>
+<label class="required control-label" for="Details">Details</label>
+<textarea name="description" id="description" rows="5" placeholder="Fill in the details here. Please try to be as specific as possible.&#x000A;">
+</textarea>
+</div>
+<div class='control-group'>
+<label class="required control-label" for="Your_Name">Your name</label>
+<input type="text" name="name" id="name" value="" />
+</div>
+<div class='control-group'>
+<label class="required control-label" for="Your_Email">Your email</label>
+<input type="text" name="email" id="email" value="" />
+</div>
+<div class='control-group'>
+<label class="required control-label" for="Severity">Severity</label>
+<select name="severity" id="severity"><option value="0">-</option>
+<option value="severity_1">Severity 1 (Highest)</option>
+<option value="severity_2">Severity 2</option>
+<option value="severity_3">Severity 3</option>
+<option value="severity_4">Severity 4</option>
+<option value="severity_5">Severity 5 (Lowest)</option></select>
+</div>
+<div class='control-group'>
+<div class='control-label'></div>
+We will get back to you within 24 hours.
+</div>
+<div class='control-group'>
+<div class='control-label'></div>
+<input type="submit" name="commit" value="Submit" class="btn btn-success" />
+</div>
+</form>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  var ut_params = ut_params || [];ut_params.push("UT-348266764");//version:0.4
+  (function() {var ut = document.createElement('script'); ut.type = 'text/javascript'; ut.async = true;
+  ut.src = (("https:" == document.location.protocol) ? "https://" : "http://") + 'app.ubertags.com/javascripts/ubertags.js';
+  var script = document.getElementsByTagName('script')[0]; script.parentNode.insertBefore(ut, script);})();
+</script>
+
+</div>
+
+</body>
+</html>
